@@ -60,8 +60,12 @@ Be concise, structured, and focused on helping the next LLM seamlessly continue 
 const codexSummaryPrefix = codexsummary.Prefix
 
 func (s *Server) codexBackend(w http.ResponseWriter, r *http.Request) {
-	// Responses over a WebSocket: 426 sends Codex to plain HTTP at once
+	// Responses over a WebSocket: a turn of Codex's own goes on as it came
+	// (codexWSTunnel), and 426 sends the rest to plain HTTP at once
 	if strings.EqualFold(r.Header.Get("Upgrade"), "websocket") {
+		if s.codexWSTunnel(w, r, strings.TrimPrefix(r.URL.Path, CodexPath)) {
+			return
+		}
 		http.Error(w, "magpie speaks HTTP", http.StatusUpgradeRequired)
 		return
 	}
