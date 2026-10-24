@@ -24,11 +24,14 @@ Result — 13/13 connections to `chatgpt.com:443`, `alpn=(none)`:
 
 ```
 00:16:17 TLS sni=chatgpt.com alpn=(none) hello=171B
-   ... x8 the same second
-00:16:30 TLS sni=chatgpt.com alpn=(none) hello=171B
+00:16:20 TLS sni=chatgpt.com alpn=(none) hello=1468B
+00:16:24 TLS sni=chatgpt.com alpn=(none) hello=171B
+00:16:28 TLS sni=chatgpt.com alpn=(none) hello=171B
 00:16:32 CLOSED chatgpt.com:443 up=39803B down=8317451B
 00:16:32 CLOSED chatgpt.com:443 up=4565B down=128385B
 ```
+
+(at 00:16:17 that line appears eight times in the log, verbatim)
 
 and the same for `ab.chatgpt.com` and `*.oaiusercontent.com`.
 
