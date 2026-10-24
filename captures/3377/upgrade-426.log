@@ -1,0 +1,10 @@
+00:17:27 listening 9998
+00:17:28 GET /backend-api/codex/models?client_version=0.162.1 upgrade='' accept='*/*' len=0
+00:17:28 GET /backend-api/codex/models?client_version=0.162.1 upgrade='' accept='*/*' len=0
+00:17:30 GET /backend-api/codex/responses upgrade='websocket' accept='' len=0
+00:17:32 POST /backend-api/codex/responses upgrade='' accept='text/event-stream' len=28618
+00:17:33 POST /backend-api/codex/responses upgrade='' accept='text/event-stream' len=28621
+00:17:33 POST /backend-api/codex/responses upgrade='' accept='text/event-stream' len=28619
+00:17:34 POST /backend-api/codex/responses upgrade='' accept='text/event-stream' len=28632
+00:17:36 POST /backend-api/codex/responses upgrade='' accept='text/event-stream' len=28623
+00:17:39 POST /backend-api/codex/responses upgrade='' accept='text/event-stream' len=28625
